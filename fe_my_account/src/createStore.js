@@ -23,7 +23,6 @@ export default function createStore(history) {
     combineReducers({
       // スプレッド構文で全てのReducerを展開
       ...reducers,
-      // TODO: なぜここでrouterを設定しているかを確認
       router: connectRouter(history),
     }),
     // ミドルウェアを適用するための処理

@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// TODO:説明記載
+// Reduxの機能をアプリ全体に適用するためのライブラリをインポート
 import { Provider } from "react-redux";
-// TODO:説明記載
+// ルーティング実装するためのライブラリ
 import { ConnectedRouter } from "connected-react-router";
-// TODO:説明記載
+// historyインスタンスを作成するためのライブラリ
 import { createHashHistory } from "history";
 // createStore.jsで定義した関数を呼び出すためにインポート
 import createStore from "./createStore";
