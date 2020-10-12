@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/kazmiyamazato/.local/share/virtualenvs/be_my_account-lBMF45AP/bin/python"
+    "python.pythonPath": "/Users/kazmiyamazato/.local/share/virtualenvs/be_my_account-lBMF45AP/bin/python",
+    "python.linting.enabled": false
 }

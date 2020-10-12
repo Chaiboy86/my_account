@@ -38,8 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'leads',
-    'rest_framework'
+    'rest_framework',
+    'frontend',
+    'knox',
+    'accounts',
+    'expense',
+    'corsheaders',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',)
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,6 +58,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',  
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
 ]
 
 ROOT_URLCONF = 'src.urls'
@@ -77,8 +92,12 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'tenant',
+         'USER': 'root',
+         'PASSWORD': 'password',
     }
 }
 
