@@ -1,0 +1,17 @@
+export const CATEGORY = "カテゴリー";
+export const ITEM = "アイテム";
+export const VALUE = "金額";
+export const YEN = "¥";
+export const PAYMENT_METHOD = "支払方法";
+export const DATE = "日付";
+export const ACCOUNT = "アカウント";
+export const PLACE = "お店";
+export const NOTE = "備考";
+export const REGISTER = "登録";
+export const EXPENSE = "支出";
+export const EXPENSE_REGISTER = "支出登録";
+export const EXPENSE_LIST = "支出一覧";
+export const DELETE = "削除";
+export const ACCOUNT_COMMON = "共同";
+export const ACCOUNT_PERSONAL = "個人";
+export const APP_TITLE = "My家計簿";
