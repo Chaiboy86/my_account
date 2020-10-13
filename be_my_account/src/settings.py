@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livereload',
     'django.contrib.staticfiles',
     'leads',
     'rest_framework',
@@ -59,12 +60,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',  
+    'django.middleware.common.CommonMiddleware',
+    'livereload.middleware.LiveReloadScript'  
 ]
 
 CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
 ]
+
 
 ROOT_URLCONF = 'src.urls'
 

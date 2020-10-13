@@ -189,8 +189,8 @@ export class ExpenseForm extends Component {
       <Fragment>
         <Title>{text.EXPENSE_REGISTER}</Title>
         <form className={classes.form} onSubmit={this.onSubmit}>
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
+          <Grid container spacing={0}>
+            <Grid item xs={12}>
               <FormControl variant="outlined" fullWidth={true} margin="normal">
                 <InputLabel>{text.CATEGORY}</InputLabel>
                 <Select
@@ -206,7 +206,7 @@ export class ExpenseForm extends Component {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <FormControl variant="outlined" fullWidth={true} margin="normal">
                 <InputLabel>{text.ITEM}</InputLabel>
                 <Select
@@ -224,7 +224,7 @@ export class ExpenseForm extends Component {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <FormControl variant="outlined" fullWidth={true} margin="normal">
                 <InputLabel>{text.ACCOUNT}</InputLabel>
                 <Select
@@ -240,7 +240,7 @@ export class ExpenseForm extends Component {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <FormControl variant="outlined" fullWidth={true} margin="normal">
                 <InputLabel>{text.PAYMENT_METHOD}</InputLabel>
                 <Select
@@ -256,7 +256,7 @@ export class ExpenseForm extends Component {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -274,11 +274,12 @@ export class ExpenseForm extends Component {
                 }}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <KeyboardDatePicker
                   variant="dialog"
                   inputVariant="outlined"
+                  fullWidth
                   format="yyyy/MM/dd"
                   margin="normal"
                   InputAdornmentProps={{ position: "start" }}
@@ -292,7 +293,7 @@ export class ExpenseForm extends Component {
                 />
               </MuiPickersUtilsProvider>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -305,7 +306,7 @@ export class ExpenseForm extends Component {
                 value={place}
               />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -322,9 +323,10 @@ export class ExpenseForm extends Component {
           <div className={classes.buttons}>
             <Button
               type="submit"
-              variant="contained"
+              variant="outlined"
               color="primary"
               className={classes.button}
+              disableElevation
             >
               {text.REGISTER}
             </Button>
